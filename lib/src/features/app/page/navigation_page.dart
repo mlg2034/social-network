@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:maulen_super_handsome/src/features/app/router/app_router.gr.dart';
 import 'package:maulen_super_handsome/src/ui_component/ui_kit/app_colors.dart';
+@RoutePage()
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -17,7 +18,7 @@ class _NavigationPageState extends State<NavigationPage>
   int? previousIndex;
   @override
   void initState() {
-    tabController = TabController(length: 5, vsync: this);
+    tabController = TabController(length: 4, vsync: this);
     super.initState();
   }
 
@@ -30,6 +31,7 @@ class _NavigationPageState extends State<NavigationPage>
         MainRoute(),
         MainRoute(),
       ],
+     
       backgroundColor: AppColors.black,
       bottomNavigationBuilder: (context, tabsRouter) {
         return BottomNavigationBar(

@@ -7,13 +7,14 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _approuter = AppRouter();
+    final approuter = AppRouter();
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       splitScreenMode: true,
       builder: (context, child) {
         return MaterialApp.router(
-          routerConfig: _approuter.config(),
+          routerConfig: approuter.config(),
+          
         );
       },
     );
