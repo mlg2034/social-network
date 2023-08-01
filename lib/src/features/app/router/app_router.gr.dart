@@ -13,7 +13,7 @@ import 'package:maulen_super_handsome/src/features/app/page/navigation_page.dart
     as _i1;
 import 'package:maulen_super_handsome/src/features/app/router/empty_router_page.dart'
     as _i2;
-import 'package:maulen_super_handsome/src/features/main_page/page/widgets/main_page.dart'
+import 'package:maulen_super_handsome/src/features/main_page/page/main_page.dart'
     as _i3;
 
 abstract class $AppRouter extends _i4.RootStackRouter {

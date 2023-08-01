@@ -1,4 +1,5 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:maulen_super_handsome/src/features/app/router/app_router.gr.dart';
@@ -31,10 +32,11 @@ class _NavigationPageState extends State<NavigationPage>
         MainRoute(),
         MainRoute(),
       ],
+          backgroundColor: AppColors.appColor,
      
-      backgroundColor: AppColors.black,
       bottomNavigationBuilder: (context, tabsRouter) {
-        return BottomNavigationBar(
+        return BottomNavigationBar(type: BottomNavigationBarType.fixed,
+          backgroundColor: AppColors.appColor,
           currentIndex: tabsRouter.activeIndex,
           showSelectedLabels: false,
           showUnselectedLabels: false,
@@ -49,28 +51,28 @@ class _NavigationPageState extends State<NavigationPage>
             BottomNavigationBarItem(
               label: '',
               icon: Icon(
-                LineIcons.home,
-                color: AppColors.appColors,
+            Icons.home,
+                color: AppColors.white,
               ),
             ),
              BottomNavigationBarItem(
               label: '',
               icon: Icon(
-                LineIcons.photoVideo,
-                color: AppColors.appColors,
+                CupertinoIcons.person,
+                color: AppColors.white,
               ),
             ),
              BottomNavigationBarItem(
               label: '',
               icon: Icon(
                 Icons.add,
-                color: AppColors.appColors,
+                color: AppColors.white,
               ),
             ), BottomNavigationBarItem(
               label: '',
               icon: Icon(
                 LineIcons.user,
-                color: AppColors.appColors,
+                color: AppColors.white,
               ),
             ),
           ],

@@ -1,5 +1,4 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:maulen_super_handsome/src/features/app/router/empty_router_page.dart';
 
 import 'app_router.gr.dart';
 
