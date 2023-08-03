@@ -6,7 +6,6 @@ import 'package:maulen_super_handsome/src/features/profile_page/page/widgets/pro
 import 'package:maulen_super_handsome/src/features/profile_page/page/widgets/user_info_widget.dart';
 import 'package:maulen_super_handsome/src/features/profile_page/page/widgets/your_post_text_widget.dart';
 import 'package:maulen_super_handsome/src/ui_component/ui_kit/app_colors.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/text_theme.dart';
 @RoutePage()
 class ProfilePage extends StatelessWidget {
   const ProfilePage({super.key});
