@@ -38,6 +38,12 @@ dependencies:
   auto_route_generator: ^7.2.0
   google_fonts: ^5.1.0
   line_icons: ^2.0.3
+  firebase_core: ^2.15.0
+  firebase_auth: ^4.7.2
+  firebase_dynamic_links: ^5.3.4
+  google_sign_in: ^6.1.4
+  email_validator: ^2.1.17
+  freezed: ^2.4.1
 
 
 
