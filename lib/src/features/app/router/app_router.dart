@@ -11,7 +11,8 @@ class AppRouter extends $AppRouter {
           path: '/navigation',
           initial: true,
           children: [
-            AutoRoute(page: MainRoute.page, path: 'main', initial: true)
+            AutoRoute(page: MainRoute.page, path: 'main', initial: true) , 
+            AutoRoute(page: ProfileRoute.page , path: 'profile'),
           ],
         ),
       ];

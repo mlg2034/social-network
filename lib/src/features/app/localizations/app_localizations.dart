@@ -17,7 +17,7 @@ import 'app_localizations_ru.dart';
 /// `supportedLocales` list. For example:
 ///
 /// ```dart
-/// import 'src/app_localizations.dart';
+/// import 'localizations/app_localizations.dart';
 ///
 /// return MaterialApp(
 ///   localizationsDelegates: AppLocalizations.localizationsDelegates,
@@ -100,6 +100,12 @@ abstract class AppLocalizations {
   /// In ru, this message translates to:
   /// **'Начать'**
   String get getStarted;
+
+  /// No description provided for @back.
+  ///
+  /// In ru, this message translates to:
+  /// **'Назад'**
+  String get back;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

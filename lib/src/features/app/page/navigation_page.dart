@@ -26,11 +26,11 @@ class _NavigationPageState extends State<NavigationPage>
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: [
+      routes: const [
         MainRoute(),
         MainRoute(),
         MainRoute(),
-        MainRoute(),
+        ProfileRoute(),
       ],
           backgroundColor: AppColors.appColor,
      
@@ -47,7 +47,7 @@ class _NavigationPageState extends State<NavigationPage>
               tabsRouter.setActiveIndex(value);
             }
           },
-          items: [
+          items: const [
             BottomNavigationBarItem(
               label: '',
               icon: Icon(

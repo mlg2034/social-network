@@ -6,4 +6,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get getStarted => 'Начать';
+
+  @override
+  String get back => 'Назад';
 }

@@ -6,4 +6,7 @@ class AppLocalizationsKk extends AppLocalizations {
 
   @override
   String get getStarted => 'Бастау';
+
+  @override
+  String get back => 'Артқа';
 }
