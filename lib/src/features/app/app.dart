@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:maulen_super_handsome/src/features/app/bloc/multi_bloc_wrapper.dart';
 import 'package:maulen_super_handsome/src/features/app/router/app_router.dart';
 
 class MyApp extends StatelessWidget {
@@ -7,14 +8,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final approuter = AppRouter();
+    final AppRouter approuter = AppRouter();
     return ScreenUtilInit(
       designSize: const Size(375, 812),
       splitScreenMode: true,
       builder: (context, child) {
-        return MaterialApp.router(
-          routerConfig: approuter.config(),
-          
+        return MultiBlocWrapper(
+          child: MaterialApp.router(
+            routerConfig: approuter.config(),
+            
+          ),
         );
       },
     );

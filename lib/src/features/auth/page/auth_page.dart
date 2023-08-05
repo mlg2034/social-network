@@ -1,14 +1,23 @@
 import 'package:auto_route/auto_route.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/app_colors.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/text_theme.dart';
+import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
+import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/text_field.dart';
 
 @RoutePage()
-class AuthPage extends StatelessWidget {
+class AuthPage extends StatefulWidget {
   const AuthPage({super.key});
 
+  @override
+  State<AuthPage> createState() => _AuthPageState();
+}
+
+class _AuthPageState extends State<AuthPage> {
+  final FirebaseAuth auth = FirebaseAuth.instance;
+  final TextEditingController loginContrroller = TextEditingController();
+  final TextEditingController passwordController = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,12 +44,15 @@ class AuthPage extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 CustomTextField(
+                  controller: loginContrroller,
                   title: 'login', isObscured: false,
                 ),
                 CustomTextField(
+                  controller: passwordController,
                   title: 'password', isObscured: true,
                 ),
                 CustomTextField(
+                  controller: passwordController,
                   title: 'confirm password', isObscured: true,
                 ),
                 Padding(
