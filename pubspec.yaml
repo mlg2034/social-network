@@ -45,6 +45,7 @@ dependencies:
   email_validator: ^2.1.17
   freezed: ^2.4.1
   lint: ^2.1.2
+  cloud_firestore: ^4.8.4
 
 
 
