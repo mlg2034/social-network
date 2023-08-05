@@ -57,7 +57,7 @@ dev_dependencies:
   flutter_gen_runner: ^5.3.1
   build_runner: ^2.4.6
 flutter_gen:
-    output: lib/gen/ 
+    output: lib/src/gen 
     line_length: 80 
 
     integrations:

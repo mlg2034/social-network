@@ -16,8 +16,10 @@ class AuthPage extends StatefulWidget {
 
 class _AuthPageState extends State<AuthPage> {
   final FirebaseAuth auth = FirebaseAuth.instance;
-  final TextEditingController loginContrroller = TextEditingController();
-  final TextEditingController passwordController = TextEditingController();
+  final TextEditingController _loginContrroller = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+  final TextEditingController _passwordConfirmController =
+      TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,16 +46,19 @@ class _AuthPageState extends State<AuthPage> {
               mainAxisSize: MainAxisSize.min,
               children: [
                 CustomTextField(
-                  controller: loginContrroller,
-                  title: 'login', isObscured: false,
+                  controller: _loginContrroller,
+                  title: 'login',
+                  isObscured: false,
                 ),
                 CustomTextField(
-                  controller: passwordController,
-                  title: 'password', isObscured: true,
+                  controller: _passwordController,
+                  title: 'password',
+                  isObscured: true,
                 ),
                 CustomTextField(
-                  controller: passwordController,
-                  title: 'confirm password', isObscured: true,
+                  controller: _passwordConfirmController,
+                  title: 'confirm password',
+                  isObscured: true,
                 ),
                 Padding(
                   padding: EdgeInsets.symmetric(vertical: 32.h),

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:maulen_super_handsome/src/features/app/bloc/multi_bloc_wrapper.dart';
-import 'package:maulen_super_handsome/src/features/app/router/app_router.dart';
+import 'package:maulen_super_handsome/shared/router/app_router.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);

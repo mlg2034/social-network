@@ -11,7 +11,7 @@
 import 'package:auto_route/auto_route.dart' as _i6;
 import 'package:maulen_super_handsome/src/features/app/page/navigation_page.dart'
     as _i1;
-import 'package:maulen_super_handsome/src/features/app/router/empty_router_page.dart'
+import 'package:maulen_super_handsome/shared/router/empty_router_page.dart'
     as _i2;
 import 'package:maulen_super_handsome/src/features/auth/page/auth_page.dart'
     as _i3;
