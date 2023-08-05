@@ -1,8 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/app_colors.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/text_theme.dart';
+import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
+import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 
 class ProfileAppBar extends StatelessWidget implements PreferredSizeWidget {
   const ProfileAppBar({

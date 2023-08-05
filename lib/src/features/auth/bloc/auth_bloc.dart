@@ -1,14 +1,14 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:maulen_super_handsome/src/features/auth/data/repositories/auth_repositories.dart';
+import 'package:maulen_super_handsome/src/features/auth/data/repositories/auth_data_repositories.dart';
 
 part 'auth_event.dart';
 part 'auth_state.dart';
 part 'auth_bloc.freezed.dart';
 
 class AuthBloc extends Bloc<AuthEvent, AuthState> {
-  final AuthRepositories authRepositories;
+  final AuthDataRepositories authRepositories;
   AuthBloc({required this.authRepositories}) : super(const _Initial()) {
     on<_SignInRequest>(
         (event, emit) async => await _signIn(event: event, emit: emit));

@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
-import 'auth_repositories.dart';
+import 'auth_data_repositories.dart';
 
-class AuthRepositoriesImpl implements AuthRepositories {
+class AuthDataRepositoriesImpl implements AuthDataRepositories {
   final _firebaseAuth = FirebaseAuth.instance;
   @override
   Future<void> signUp({required String email, required String password}) async {

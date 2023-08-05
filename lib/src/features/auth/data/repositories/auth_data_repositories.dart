@@ -1,4 +1,4 @@
-abstract class AuthRepositories {
+abstract class AuthDataRepositories {
   Future<void> signUp(
       {required String email, required String password}) async {}
   Future<void> signIn(

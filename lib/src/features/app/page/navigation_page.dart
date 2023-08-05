@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:line_icons/line_icons.dart';
 import 'package:maulen_super_handsome/src/features/app/router/app_router.gr.dart';
-import 'package:maulen_super_handsome/src/ui_component/ui_kit/app_colors.dart';
+import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 @RoutePage()
 
 class NavigationPage extends StatefulWidget {
