@@ -1,8 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:maulen_super_handsome/shared/router/services/di.dart';
-import 'package:maulen_super_handsome/src/features/auth/bloc/auth_bloc.dart';
-import 'package:maulen_super_handsome/src/features/auth/data/repositories/auth_data_repositories_impl.dart';
+import 'package:maulen_super_handsome/src/features/auth/data/remoute/auth_data_repositories_impl.dart';
 
 class ProviderScope extends StatelessWidget {
   const ProviderScope({super.key, required this.child});
@@ -12,14 +11,11 @@ class ProviderScope extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(
-          create: (context) => AuthBloc(
-            authRepositories: getIt<AuthDataRepositoriesImpl>(),
-          ),
-        )
+        // ignore: always_specify_types
+        // 
       ],
       child: Builder(
-        builder: (context) {
+        builder: (_) {
           return child;
         },
       ),

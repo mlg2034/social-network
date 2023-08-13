@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:maulen_super_handsome/src/features/auth/bloc/auth_bloc.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/text_field.dart';
@@ -68,12 +67,11 @@ class _AuthPageState extends State<AuthPage> {
                     onTap: () {
                       final String email = _loginContrroller.text.trim();
                       final String password = _passwordController.text.trim();
-                      context.read<AuthBloc>().add(AuthEvent.signInRequest(
-                          email: email, password: password));
+                    
                     },
                     child: Container(
                       decoration: BoxDecoration(
-                        color: AppColors.accentColor,
+                        color: const Color.fromARGB(255, 46, 65, 82),
                         borderRadius: BorderRadius.circular(8),
                       ),
                       width: double.infinity,
