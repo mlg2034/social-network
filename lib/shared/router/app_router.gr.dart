@@ -9,6 +9,8 @@
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
 import 'package:auto_route/auto_route.dart' as _i6;
+import 'package:flutter/cupertino.dart' as _i7;
+import 'package:flutter/material.dart' as _i8;
 import 'package:maulen_super_handsome/shared/router/empty_router_page.dart'
     as _i1;
 import 'package:maulen_super_handsome/src/features/app/page/navigation_page.dart'
@@ -32,9 +34,13 @@ abstract class $AppRouter extends _i6.RootStackRouter {
       );
     },
     NavigationRoute.name: (routeData) {
+      final args = routeData.argsAs<NavigationRouteArgs>();
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i2.NavigationPage(),
+        child: _i2.NavigationPage(
+          key: args.key,
+          uid: args.uid,
+        ),
       );
     },
     AuthRoute.name: (routeData) {
@@ -44,9 +50,13 @@ abstract class $AppRouter extends _i6.RootStackRouter {
       );
     },
     MainRoute.name: (routeData) {
+      final args = routeData.argsAs<MainRouteArgs>();
       return _i6.AutoRoutePage<dynamic>(
         routeData: routeData,
-        child: const _i4.MainPage(),
+        child: _i4.MainPage(
+          key: args.key,
+          uid: args.uid,
+        ),
       );
     },
     ProfileRoute.name: (routeData) {
@@ -74,16 +84,40 @@ class EmptyRouterRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i2.NavigationPage]
-class NavigationRoute extends _i6.PageRouteInfo<void> {
-  const NavigationRoute({List<_i6.PageRouteInfo>? children})
-      : super(
+class NavigationRoute extends _i6.PageRouteInfo<NavigationRouteArgs> {
+  NavigationRoute({
+    _i7.Key? key,
+    required String uid,
+    List<_i6.PageRouteInfo>? children,
+  }) : super(
           NavigationRoute.name,
+          args: NavigationRouteArgs(
+            key: key,
+            uid: uid,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'NavigationRoute';
 
-  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
+  static const _i6.PageInfo<NavigationRouteArgs> page =
+      _i6.PageInfo<NavigationRouteArgs>(name);
+}
+
+class NavigationRouteArgs {
+  const NavigationRouteArgs({
+    this.key,
+    required this.uid,
+  });
+
+  final _i7.Key? key;
+
+  final String uid;
+
+  @override
+  String toString() {
+    return 'NavigationRouteArgs{key: $key, uid: $uid}';
+  }
 }
 
 /// generated route for
@@ -102,16 +136,40 @@ class AuthRoute extends _i6.PageRouteInfo<void> {
 
 /// generated route for
 /// [_i4.MainPage]
-class MainRoute extends _i6.PageRouteInfo<void> {
-  const MainRoute({List<_i6.PageRouteInfo>? children})
-      : super(
+class MainRoute extends _i6.PageRouteInfo<MainRouteArgs> {
+  MainRoute({
+    _i8.Key? key,
+    required String uid,
+    List<_i6.PageRouteInfo>? children,
+  }) : super(
           MainRoute.name,
+          args: MainRouteArgs(
+            key: key,
+            uid: uid,
+          ),
           initialChildren: children,
         );
 
   static const String name = 'MainRoute';
 
-  static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
+  static const _i6.PageInfo<MainRouteArgs> page =
+      _i6.PageInfo<MainRouteArgs>(name);
+}
+
+class MainRouteArgs {
+  const MainRouteArgs({
+    this.key,
+    required this.uid,
+  });
+
+  final _i8.Key? key;
+
+  final String uid;
+
+  @override
+  String toString() {
+    return 'MainRouteArgs{key: $key, uid: $uid}';
+  }
 }
 
 /// generated route for

@@ -3,8 +3,8 @@ import 'package:maulen_super_handsome/src/features/auth/data/model/user_model.da
 import 'package:maulen_super_handsome/src/features/auth/data/remoute/auth_data_repositories_impl.dart';
 
 class AuthRepositoriesImpl extends AuthDataRepositoriesImpl{
-  AuthDataRepositoriesImpl remoteRespository;
   AuthRepositoriesImpl(this.remoteRespository);
+  AuthDataRepositoriesImpl remoteRespository;
   @override
   Future<void>signIn(UserEntity user) async=>remoteRespository.signIn(user);
   @override
