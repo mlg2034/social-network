@@ -7,7 +7,7 @@ import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/is_sign_in_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_out_uc.dart';
 
-part 'auth_cubit..dart';
+part 'auth_state.dart';
 part 'auth_cubit.freezed.dart';
 
 class AuthCubitCubit extends Cubit<AuthCubitState> {

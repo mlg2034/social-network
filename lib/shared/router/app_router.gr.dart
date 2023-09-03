@@ -15,11 +15,11 @@ import 'package:maulen_super_handsome/shared/router/empty_router_page.dart'
     as _i1;
 import 'package:maulen_super_handsome/src/features/app/page/navigation_page.dart'
     as _i2;
-import 'package:maulen_super_handsome/src/features/auth/page/auth_page.dart'
+import 'package:maulen_super_handsome/src/features/auth/presentation/auth_page.dart'
     as _i3;
-import 'package:maulen_super_handsome/src/features/main_page/page/main_page.dart'
+import 'package:maulen_super_handsome/src/features/main_page/presentation/main_page.dart'
     as _i4;
-import 'package:maulen_super_handsome/src/features/profile_page/page/profile_page.dart'
+import 'package:maulen_super_handsome/src/features/profile_page/presentaion/profile_page.dart'
     as _i5;
 
 abstract class $AppRouter extends _i6.RootStackRouter {

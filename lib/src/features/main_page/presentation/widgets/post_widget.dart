@@ -67,19 +67,19 @@ class _PostWidgetState extends State<PostWidget> {
               ),
               Row(
                 children: [
-                  Icon(
+                  const Icon(
                     Icons.favorite_outline,
                     color: AppColors.white,
                   ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 12.w),
-                    child: Icon(
+                    child: const Icon(
                       CupertinoIcons.arrow_turn_down_right,
                       color: AppColors.white,
                     ),
                   ),
-                  Spacer(),
-                  Icon(
+                  const Spacer(),
+                  const Icon(
                     CupertinoIcons.bookmark,
                     color: AppColors.white,
                   )

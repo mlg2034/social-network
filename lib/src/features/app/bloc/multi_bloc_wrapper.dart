@@ -3,8 +3,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:maulen_super_handsome/shared/services/di.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/get_current_uid_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/is_sign_in_uc.dart';
+import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_in_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_out_uc.dart';
-import 'package:maulen_super_handsome/src/features/auth/page/cubit/auth/auth_cubit.dart';
+import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_up_uc.dart';
+import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/auth/auth_cubit.dart';
+import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/user/user_cubit.dart';
+
 import 'package:nested/nested.dart';
 
 class ProviderScope extends StatelessWidget {
@@ -21,6 +25,13 @@ class ProviderScope extends StatelessWidget {
             signOutUC: getIt<SignOutUC>(),
             isSignInUC: getIt<IsSignInUC>(),
           ),
+        ),
+        BlocProvider(
+          create: (BuildContext context) => UserCubit(
+            getCurrentUidUseCase: getIt<GetCurrentUidUseCase>(),
+            signUpUace: getIt<SignUpUseCase>(),
+            signInUseCase: getIt<SignInUseCase>(),
+          )
         ),
       ],
       child: Builder(

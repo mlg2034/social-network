@@ -4,9 +4,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:maulen_super_handsome/src/features/app/page/navigation_page.dart';
-import 'package:maulen_super_handsome/src/features/auth/page/cubit/auth/auth_cubit.dart';
-import 'package:maulen_super_handsome/src/features/auth/page/cubit/user/user_cubit.dart';
-import 'package:maulen_super_handsome/src/features/main_page/page/main_page.dart';
+import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/auth/auth_cubit.dart';
+import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/user/user_cubit.dart';
+import 'package:maulen_super_handsome/src/features/main_page/presentation/main_page.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/text_field.dart';
@@ -50,7 +50,7 @@ class _AuthPageState extends State<AuthPage> {
       backgroundColor: AppColors.accentColor,
       body: BlocConsumer<UserCubit, UserState>(listener: (context, userState) {
         userState.when(
-          initial: () => const SizedBox(),
+          initial: () => const Center(child: Text('INITIAL STATE'),),
           loading: () => const Center(child: CircularProgressIndicator()),
           error: (String error) => Center(
             child: Text(error),
