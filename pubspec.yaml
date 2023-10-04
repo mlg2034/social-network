@@ -37,7 +37,7 @@ dependencies:
   firebase_auth: ^4.7.2
   firebase_dynamic_links: ^5.3.4
   google_sign_in: ^6.1.4
-  cloud_firestore: ^4.8.4
+  cloud_firestore: ^4.9.1
 
   #others
   equatable: ^2.0.5
@@ -50,6 +50,8 @@ dependencies:
   line_icons: ^2.0.3
   email_validator: ^2.1.17
   lint: ^2.1.2
+  firebase_storage: ^11.2.6
+  flutter_hooks: ^0.20.2
 
 
 

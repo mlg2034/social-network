@@ -68,7 +68,15 @@ class _AuthPageState extends State<AuthPage> {
           ),
           loaded: () => BlocBuilder<AuthCubitCubit, AuthCubitState>(
             builder: (context, state) => state.when(
-              initial: () => SizedBox(),
+              initial: () => Container(
+                decoration: BoxDecoration(
+                  color: AppColors.white,
+                  borderRadius: BorderRadius.circular(14.r),
+                ),
+                padding: EdgeInsets.all(20.h.w),
+                alignment: Alignment.center,
+                child: Text('HELLO DEAR USER!' , style: head1,),
+              ),
               authtenticated: (String uid) => NavigationPage(uid: uid),
               unAuthtenticated: () => AuthWidget(
                   loginContrroller: _loginContrroller,

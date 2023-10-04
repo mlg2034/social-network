@@ -20,7 +20,7 @@ class ProfilePage extends StatelessWidget {
             forceElevated: false,
             backgroundColor: AppColors.accentColor,
             toolbarHeight: 380.h,
-            title: Column(
+            title:const Column(
               children: [
                 ProfileAppBar(),
                 UserInfoWidget(),
