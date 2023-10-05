@@ -7,8 +7,10 @@ import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 
 @RoutePage()
 class NavigationPage extends StatefulWidget {
-  final String uid;
-  const NavigationPage({super.key, required this.uid});
+  // final String uid;
+  const NavigationPage({super.key, 
+  // required this.uid
+  });
 
   @override
   State<NavigationPage> createState() => _NavigationPageState();
@@ -28,9 +30,15 @@ class _NavigationPageState extends State<NavigationPage>
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
       routes: [
-        MainRoute(uid: widget.uid),
-        MainRoute(uid: widget.uid),
-        MainRoute(uid: widget.uid),
+        MainRoute(
+          // uid: widget.uid
+          ),
+        MainRoute(
+          // uid: widget.uid
+          ),
+        MainRoute(
+          // uid: widget.uid
+          ),
         const ProfileRoute(),
       ],
       backgroundColor: AppColors.appColor,
