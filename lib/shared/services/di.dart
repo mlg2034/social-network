@@ -11,9 +11,19 @@ import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_
 final GetIt getIt = GetIt.I;
 
 Future<void> configDi() async {
-  getIt.registerLazySingleton<AuthDataRepositories>(
+// Repositories
+ getIt.registerLazySingleton<AuthDataRepositories>(
     () => AuthDataRepositoriesImpl(),
   );
+
+  // Регистрируем AuthRepositoriesImpl
+  getIt.registerLazySingleton(
+    () => AuthRepositoriesImpl(
+      getIt<AuthDataRepositories>(),  // Важно: здесь должен быть AuthDataRepositories, а не AuthDataRepositoriesImpl
+    ),
+  );
+//Use Cases
+
   getIt.registerLazySingleton(
     () => SignInUseCase(
       remoteRespository: getIt.get<AuthRepositoriesImpl>(),

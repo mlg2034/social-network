@@ -1,14 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:auto_route/auto_route.dart';
-import 'package:maulen_super_handsome/src/features/main_page/page/widgets/post_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:maulen_super_handsome/src/features/main_page/presentation/widgets/custom_dialog.dart';
+import 'package:maulen_super_handsome/src/features/main_page/presentation/widgets/post_widget.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/app_bar.dart';
 
 @RoutePage()
 class MainPage extends StatefulWidget {
-  final String uid;
-  const MainPage({Key? key , required this.uid}) : super(key: key);
+  // final String uid;
+  const MainPage({
+    Key? key,
+    //  required this.uid
+  }) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
@@ -61,7 +66,26 @@ class _MainPageState extends State<MainPage> {
             ),
           ],
         ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: AppColors.accentColor,
+          onPressed: () async {
+            return showDialog(
+                context: context,
+                builder: (BuildContext context) {
+                  return Dialog(
+                    insetPadding: EdgeInsets.zero,
+                    backgroundColor: AppColors.accentColor,
+                    child: CustomDialog(),
+                  );
+                });
+          },
+          child: const Icon(
+            Icons.add,
+            color: AppColors.white,
+          ),
+        ),
       ),
     );
   }
 }
+

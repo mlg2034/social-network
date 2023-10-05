@@ -1,18 +1,21 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:maulen_super_handsome/src/features/auth/data/model/user_model.dart';
-import 'package:maulen_super_handsome/src/features/auth/data/remoute/auth_data_repositories_impl.dart';
+import 'package:maulen_super_handsome/src/features/auth/domain/repositories/auth_data_repositories.dart';
 
-class AuthRepositoriesImpl extends AuthDataRepositoriesImpl{
-  AuthRepositoriesImpl(this.remoteRespository);
-  AuthDataRepositoriesImpl remoteRespository;
+class AuthRepositoriesImpl extends AuthDataRepositories {
+  AuthRepositoriesImpl(this._remoteRespository);
+  final AuthDataRepositories _remoteRespository;
   @override
-  Future<void>signIn(UserEntity user) async=>remoteRespository.signIn(user);
+  Future<void> signIn(UserEntity user) async => _remoteRespository.signIn(user);
   @override
-  Future<String>getCurrentUid()async=>remoteRespository.getCurrentUid();
+  Future<String> getCurrentUid() async => _remoteRespository.getCurrentUid();
   @override
-  Future<void>signUp(UserEntity user)async=>remoteRespository.signUp(user);
+  Future<void> signUp(UserEntity user) async => _remoteRespository.signUp(user);
   @override
-  Future<bool>isSignIn()async=>remoteRespository.isSignIn();
+  Future<bool> isSignIn() async => _remoteRespository.isSignIn();
   @override
-  Future<void>signOut()async=>remoteRespository.signOut();
+  Future<void> signOut() async => _remoteRespository.signOut();
+
+  @override
+  Future<void> getCreateCurrentUser(UserEntity user) async =>
+      _remoteRespository.getCurrentUid();
 }
