@@ -1,25 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:maulen_super_handsome/shared/router/app_router.gr.dart';
 import 'package:maulen_super_handsome/src/features/main_page/presentation/widgets/text_field_dialog.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/app_button.dart';
 import 'package:auto_route/auto_route.dart';
-
-class CustomDialog extends StatelessWidget {
-  const CustomDialog({
-    super.key,
-  });
+@RoutePage()
+class CreatePostPage extends StatelessWidget {
+  const CreatePostPage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: 540.h,
-      width: (double.infinity - 40).w,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
+    return Scaffold(
+
+      appBar:AppBar(
+        backgroundColor: AppColors.accentColor,
+        elevation: 0,
+        title:  Padding(
             padding: EdgeInsets.symmetric(vertical: 24.h, horizontal: 12.w),
             child: Container(
               padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 12.w),
@@ -32,23 +30,33 @@ class CustomDialog extends StatelessWidget {
                 style: head2.copyWith(color: AppColors.white),
               ),
             ),
-          ),
-          Container(
-            width: MediaQuery.of(context).size.width.w - 40.w,
-            height: 200.h,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(8.r),
-              border: Border.all(width: 3.w, color: AppColors.appColor),
-            ),
-            child: Center(
-              child: Text(
-                'Put a image',
-                style: head2.copyWith(
-                  color: AppColors.white,
+          ), 
+      ) ,
+      backgroundColor: AppColors.accentColor,
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+        
+          Padding(
+            padding: EdgeInsets.symmetric(vertical: 20.h),
+            child: Container(
+              width: MediaQuery.of(context).size.width.w - 40.w,
+              height: 200.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(8.r),
+                border: Border.all(width: 3.w, color: AppColors.appColor),
+              ),
+              child: Center(
+                child: Text(
+                  'Put a image',
+                  style: head2.copyWith(
+                    color: AppColors.white,
+                  ),
                 ),
               ),
             ),
           ),
+          SizedBox(height: 10.h,),
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: 18.w,
@@ -56,11 +64,12 @@ class CustomDialog extends StatelessWidget {
             ),
             child: const TextFieldDialog(),
           ),
+          SizedBox(height: 20.h,),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               InkWell(
-                onTap: () => context.router.pop(),
+                onTap: () => context.router.push(const MainRoute()),
                 child: const AppButton(
                   textColor: AppColors.lightGrey,
                   title: 'Cancel',

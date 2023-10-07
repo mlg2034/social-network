@@ -52,14 +52,14 @@ class UserInfoWidget extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.symmetric(vertical: 20.h),
+          padding: EdgeInsets.symmetric(vertical: 10.h),
           child: Container(
             alignment: Alignment.center,
             child: CircleAvatar(
-              radius: 64,
+              radius: 64.r,
               backgroundColor: AppColors.appColor,
               child: CircleAvatar(
-                radius: 58,
+                radius: 58.r,
                 backgroundImage: AssetImage(Assets.images.gilphoil.path),
               ),
             ),

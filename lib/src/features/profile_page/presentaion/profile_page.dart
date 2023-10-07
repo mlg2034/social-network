@@ -17,6 +17,7 @@ class ProfilePage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
+            automaticallyImplyLeading: false,
             forceElevated: false,
             backgroundColor: AppColors.accentColor,
             toolbarHeight: 380.h,

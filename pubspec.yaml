@@ -33,11 +33,11 @@ dependencies:
   intl: any
   flutter_localization: any
 #firebase 
-  firebase_core: ^2.15.0
+  firebase_core: ^2.17.0
   firebase_auth: ^4.7.2
   firebase_dynamic_links: ^5.3.4
   google_sign_in: ^6.1.4
-  cloud_firestore: ^4.9.1
+  cloud_firestore: ^4.9.3
 
   #others
   equatable: ^2.0.5
