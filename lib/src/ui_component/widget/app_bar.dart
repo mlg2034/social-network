@@ -6,7 +6,9 @@ import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+  final String title;
   const CustomAppBar({
+    required this.title,
     super.key,
   });
 
@@ -25,7 +27,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           Padding(
             padding:  EdgeInsets.symmetric(horizontal:16.0.w),
             child: Text(
-              'Main',
+              title,
               style: head2.copyWith(color: AppColors.white),
             ),
           ),

@@ -27,9 +27,10 @@ class _MainPageState extends State<MainPage> {
       child: Scaffold(
         backgroundColor: AppColors.accentColor,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: AppColors.appColor,
           elevation: 0,
-          title: CustomAppBar(),
+          title: const CustomAppBar(title: 'Main',),
           bottom: TabBar(
             tabs: [
               Tab(

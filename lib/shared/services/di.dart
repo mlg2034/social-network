@@ -7,19 +7,28 @@ import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_in_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_out_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_up_uc.dart';
+import 'package:maulen_super_handsome/src/features/create_post/data/remote/create_post_repository.dart';
+import 'package:maulen_super_handsome/src/features/create_post/data/remote/create_post_repository_data.dart';
+import 'package:maulen_super_handsome/src/features/create_post/domain/repository/create_post_repository.dart';
 
 final GetIt getIt = GetIt.I;
 
 Future<void> configDi() async {
 // Repositories
- getIt.registerLazySingleton<AuthDataRepositories>(
+  getIt.registerLazySingleton<AuthDataRepositories>(
     () => AuthDataRepositoriesImpl(),
   );
-
+  getIt.registerLazySingleton<CreatePosRemotetRepository>(
+    () => CreatePostRepositoryData(),
+  );
+  getIt.registerLazySingleton<CreatePostRepository>(
+    () => CreatePostRepositoryImpl(),
+  );
   // Регистрируем AuthRepositoriesImpl
   getIt.registerLazySingleton(
     () => AuthRepositoriesImpl(
-      getIt<AuthDataRepositories>(),  // Важно: здесь должен быть AuthDataRepositories, а не AuthDataRepositoriesImpl
+      getIt<
+          AuthDataRepositories>(), // Важно: здесь должен быть AuthDataRepositories, а не AuthDataRepositoriesImpl
     ),
   );
 //Use Cases

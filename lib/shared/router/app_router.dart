@@ -13,6 +13,8 @@ class AppRouter extends $AppRouter {
               children: [
                 AutoRoute(page: MainRoute.page, path: 'main', initial: true),
                 AutoRoute(page: ProfileRoute.page, path: 'profile'),
+                AutoRoute(page: CreatePostRoute.page , path:'create_post'),
+                AutoRoute(page: FreindsRoute.page , path: 'freinds'),
               ],
             ),
       ];

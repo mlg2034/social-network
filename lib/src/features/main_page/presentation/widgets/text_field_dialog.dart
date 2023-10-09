@@ -4,13 +4,17 @@ import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 
 class TextFieldDialog extends StatelessWidget {
+  final TextEditingController textEditingController ;
   const TextFieldDialog({
+    required this.textEditingController,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
+
     return TextField(
+      controller: textEditingController,
       style:
           paragprah2.copyWith(color: AppColors.white),
       maxLines: 4,

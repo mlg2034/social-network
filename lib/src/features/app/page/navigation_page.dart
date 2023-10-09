@@ -8,8 +8,9 @@ import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 @RoutePage()
 class NavigationPage extends StatefulWidget {
   // final String uid;
-  const NavigationPage({super.key, 
-  // required this.uid
+  const NavigationPage({
+    super.key,
+    // required this.uid
   });
 
   @override
@@ -29,17 +30,13 @@ class _NavigationPageState extends State<NavigationPage>
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
-      routes: [
+      routes: const [
         MainRoute(
-          // uid: widget.uid
-          ),
-        MainRoute(
-          // uid: widget.uid
-          ),
-        MainRoute(
-          // uid: widget.uid
-          ),
-        const ProfileRoute(),
+            // uid: widget.uid
+            ),
+        FreindsRoute(),
+        CreatePostRoute(),
+        ProfileRoute(),
       ],
       backgroundColor: AppColors.appColor,
       bottomNavigationBuilder: (context, tabsRouter) {
@@ -61,6 +58,10 @@ class _NavigationPageState extends State<NavigationPage>
               label: '',
               icon: Icon(
                 Icons.home,
+                color: AppColors.accentColor,
+              ),
+              activeIcon: Icon(
+                Icons.home,
                 color: AppColors.white,
               ),
             ),
@@ -68,12 +69,23 @@ class _NavigationPageState extends State<NavigationPage>
               label: '',
               icon: Icon(
                 CupertinoIcons.person,
+                color: AppColors.accentColor,
+                
+              ),
+              activeIcon:   Icon(
+                CupertinoIcons.person,
                 color: AppColors.white,
+                
               ),
             ),
+
             BottomNavigationBarItem(
               label: '',
               icon: Icon(
+                Icons.add,
+                color: AppColors.accentColor,
+              ),
+              activeIcon: Icon(
                 Icons.add,
                 color: AppColors.white,
               ),
@@ -81,6 +93,10 @@ class _NavigationPageState extends State<NavigationPage>
             BottomNavigationBarItem(
               label: '',
               icon: Icon(
+                LineIcons.user,
+                color: AppColors.accentColor,
+              ),
+              activeIcon: Icon(
                 LineIcons.user,
                 color: AppColors.white,
               ),

@@ -4,6 +4,7 @@ import 'package:maulen_super_handsome/src/features/main_page/presentation/widget
 import 'package:maulen_super_handsome/src/ui_component/theme/app_colors.dart';
 import 'package:maulen_super_handsome/src/ui_component/theme/text_theme.dart';
 import 'package:maulen_super_handsome/src/ui_component/widget/app_button.dart';
+import 'package:auto_route/auto_route.dart';
 
 class CustomDialog extends StatelessWidget {
   const CustomDialog({
@@ -12,6 +13,8 @@ class CustomDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController _textEditingController =
+        TextEditingController();
     return SizedBox(
       height: 540.h,
       width: (double.infinity - 40).w,
@@ -53,15 +56,20 @@ class CustomDialog extends StatelessWidget {
               horizontal: 18.w,
               vertical: 10.h,
             ),
-            child: const TextFieldDialog(),
+            child: TextFieldDialog(
+              textEditingController: _textEditingController,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const AppButton(
-                textColor: AppColors.lightGrey,
-                title: 'Delete',
-                backgroundColor: AppColors.lightBlue,
+              InkWell(
+                onTap: () => context.router.pop(),
+                child: const AppButton(
+                  textColor: AppColors.lightGrey,
+                  title: 'Cancel',
+                  backgroundColor: AppColors.lightBlue,
+                ),
               ),
               SizedBox(
                 width: 32.w,
