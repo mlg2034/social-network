@@ -8,6 +8,7 @@ import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_
 import 'package:maulen_super_handsome/src/features/auth/domain/repositories/use_cases/sign_up_uc.dart';
 import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/auth/auth_cubit.dart';
 import 'package:maulen_super_handsome/src/features/auth/presentation/cubit/user/user_cubit.dart';
+import 'package:maulen_super_handsome/src/features/create_post/presentation/bloc/create_post_bloc.dart';
 
 import 'package:nested/nested.dart';
 
@@ -27,12 +28,14 @@ class ProviderScope extends StatelessWidget {
           ),
         ),
         BlocProvider(
-          create: (BuildContext context) => UserCubit(
-            getCurrentUidUseCase: getIt<GetCurrentUidUseCase>(),
-            signUpUace: getIt<SignUpUseCase>(),
-            signInUseCase: getIt<SignInUseCase>(),
-          )
-        ),
+            create: (BuildContext context) => UserCubit(
+                  getCurrentUidUseCase: getIt<GetCurrentUidUseCase>(),
+                  signUpUace: getIt<SignUpUseCase>(),
+                  signInUseCase: getIt<SignInUseCase>(),
+                )),
+        BlocProvider(
+          create: (BuildContext context) => CreatePostBloc(),
+        )
       ],
       child: Builder(
         builder: (_) {

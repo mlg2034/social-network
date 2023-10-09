@@ -13,6 +13,8 @@ class CustomDialog extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final TextEditingController _textEditingController =
+        TextEditingController();
     return SizedBox(
       height: 540.h,
       width: (double.infinity - 40).w,
@@ -54,7 +56,9 @@ class CustomDialog extends StatelessWidget {
               horizontal: 18.w,
               vertical: 10.h,
             ),
-            child: const TextFieldDialog(),
+            child: TextFieldDialog(
+              textEditingController: _textEditingController,
+            ),
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
