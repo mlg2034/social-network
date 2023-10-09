@@ -25,10 +25,9 @@ dependencies:
   get_it: ^7.6.0
   #gen
   freezed_annotation: ^2.4.1
-  json_serializable: ^6.7.1
   json_annotation: ^4.8.1  
+  json_serializable: ^6.7.1
   freezed: ^2.4.1
-
   #l10n
   intl: any
   flutter_localization: any
@@ -52,6 +51,8 @@ dependencies:
   lint: ^2.1.2
   firebase_storage: ^11.2.6
   flutter_hooks: ^0.20.2
+  uuid: ^4.1.0
+  logger: ^2.0.2+1
 
 
 
@@ -71,6 +72,7 @@ flutter_gen:
      flutter_svg: true
      flare_flutter: true
      lottie: true  
+
 
 flutter:
  
